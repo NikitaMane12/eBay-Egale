@@ -1,152 +1,147 @@
-const Navbar = () => {
+// src/components/Navbar.tsx
+
+import React from "react";
+import {
+  Navbar as BootstrapNavbar,
+  Nav,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+const Navbar: React.FC = () => {
   return (
-    <>
-      <nav
-        className="navbar navbar-expand-lg bg-body-tertiary"
-        style={{ position: "fixed" }}
-      >
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#" style={{ marginRight: "20px" }}>
-            <img
-              src="https://convextech.com/wp-content/uploads/2024/06/logo.svg"
-              style={{ width: "200px", height: "auto", marginLeft: "100px" }}
-              alt="Logo"
-            />
-          </a>
+    <BootstrapNavbar expand="lg" className="bg-body-tertiary" fixed="top">
+      <div className="container-fluid">
+        <BootstrapNavbar.Brand
+          as={Link}
+          to="/Home"
+          style={{ marginRight: "20px" }}
+        >
+          <img
+            src="https://convextech.com/wp-content/uploads/2024/06/logo.svg"
+            style={{ width: "200px", height: "auto", marginLeft: "100px" }}
+            alt="Logo"
+          />
+        </BootstrapNavbar.Brand>
 
-          <div
-            className="collapse navbar-collapse"
-            id="navbarNavDropdown"
+        <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+        <BootstrapNavbar.Collapse id="basic-navbar-nav">
+          <Nav
+            className="mr-auto"
             style={{
-              font: "15px",
-
+              fontSize: "16px",
+              marginLeft: "200px",
               display: "flex",
-              gap: "50px",
+              gap: "10px",
             }}
           >
-            <ul
-              className="navbar-nav"
-              style={{
-                font: "16px",
-                marginLeft: "200px",
-                display: "flex",
-                gap: "25px",
-              }}
-            >
-              <li className="nav-item">
-                <a
-                  className="nav-link active"
-                  aria-current="page"
-                  href="#"
-                  style={{ fontSize: "15px", fontWeight: "bold" }}
-                >
-                  HOME
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="#"
-                  style={{ fontSize: "15px", fontWeight: "bold" }}
-                >
-                  WHY CHOOSE US
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="#"
-                  style={{ fontSize: "15px", fontWeight: "bold" }}
-                >
-                  SAP SOLUTION
-                </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  style={{
-                    fontSize: "15px",
-                    fontWeight: "bold",
-                  }}
-                >
-                  SERVICE
-                </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <a
-                      className="dropdown-item"
-                      href="#"
-                      style={{ background: "white", fontWeight: "bold" }}
-                    >
-                      Health Care Services
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="dropdown-item"
-                      href="#"
-                      style={{ background: "white", fontWeight: "bold" }}
-                    >
-                      IT Services
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="dropdown-item"
-                      href="#"
-                      style={{ background: "white", fontWeight: "bold" }}
-                    >
-                      Non-IT And Engineering Services HOME PAGES
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li className="nav-item">
-                <a
-                  className="nav-link"
-                  href="#"
-                  style={{ fontSize: "15px", fontWeight: "bold" }}
-                >
-                  CONTACT US
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginBottom: "10px",
-          }}
-        >
-          <form className="d-flex" style={{ marginRight: "100px" }}>
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search here"
-              aria-label="Search"
-              style={{
-                fontSize: "15px",
-                fontWeight: "bold",
-                borderRadius: "10px",
-              }}
-            />
-            <button
-              className="btn btn-outline-success"
-              type="submit"
+            <Nav.Link
+              as={Link}
+              to="/Home"
               style={{ fontSize: "15px", fontWeight: "bold" }}
             >
-              Search
-            </button>
-          </form>
+              HOME
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/why-choose-us"
+              style={{ fontSize: "15px", fontWeight: "bold" }}
+            >
+              WHY CHOOSE US
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
+              to="/sap-solution"
+              style={{ fontSize: "15px", fontWeight: "bold" }}
+            >
+              SAP SOLUTION
+            </Nav.Link>
+            <NavDropdown
+              title="SERVICE"
+              id="basic-nav-dropdown"
+              style={{ fontSize: "15px", fontWeight: "bold" }}
+            >
+              <NavDropdown.Item
+                as={Link}
+                to="/health-care-services"
+                style={{ background: "white", fontWeight: "bold" }}
+              >
+                Health Care Services
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={Link}
+                to="/it-services"
+                style={{ background: "white", fontWeight: "bold" }}
+              >
+                IT Services
+              </NavDropdown.Item>
+              <NavDropdown.Item
+                as={Link}
+                to="/non-it-engineering-services"
+                style={{ background: "white", fontWeight: "bold" }}
+              >
+                Non-IT And Engineering Services
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link
+              as={Link}
+              to="/contact-us"
+              style={{ fontSize: "15px", fontWeight: "bold" }}
+            >
+              CONTACT US
+            </Nav.Link>
+          </Nav>
+        </BootstrapNavbar.Collapse>
+      </div>
+
+      <div
+        style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
+      >
+        <Form className="d-flex" style={{ marginRight: "100px" }}>
+          <FormControl
+            type="search"
+            placeholder="Search here"
+            aria-label="Search"
+            className="me-2"
+            style={{
+              fontSize: "15px",
+              fontWeight: "bold",
+              borderRadius: "10px",
+            }}
+          />
+          <Button style={{ fontSize: "15px", fontWeight: "bold" }}>
+            Search
+          </Button>
+        </Form>
+
+        <div style={{ marginLeft: "20px", display: "flex" }}>
+          <Button
+            style={{
+              fontSize: "15px",
+              fontWeight: "bold",
+              marginRight: "10px",
+              height: "40px",
+              marginTop: "10px",
+            }}
+          >
+            Login
+          </Button>
+          <Button
+            style={{
+              fontSize: "15px",
+              fontWeight: "bold",
+              height: "40px",
+              marginTop: "10px",
+            }}
+          >
+            SignUp
+          </Button>
         </div>
-      </nav>
-    </>
+      </div>
+    </BootstrapNavbar>
   );
 };
 
