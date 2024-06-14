@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
             >
               <NavDropdown.Item
                 as={Link}
-                to="/health-care-services"
+                to="/Service"
                 style={{ background: "white", fontWeight: "bold" }}
               >
                 Health Care Services
