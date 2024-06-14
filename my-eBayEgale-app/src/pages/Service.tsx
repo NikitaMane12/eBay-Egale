@@ -81,43 +81,55 @@ const Service: React.FC = () => {
           </a>
         </div>
       </div>
-      <div>
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            gap: "16px",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            marginTop: "40px",
-          }}
-        >
-          {posts.map((Service) => (
-            <div
-              key={Service.id}
-              style={{
-                border: "1px solid #ddd",
-                borderRadius: "8px",
-                width: "300px",
-                padding: "16px",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                backgroundColor: "white",
-              }}
-            >
-              <img
-                src={Service.image}
-                alt={Service.name}
+      <div style={{ maxWidth: "100%", overflowX: "auto" }}>
+        {posts.map(
+          (post, index) =>
+            index % 3 === 0 && (
+              <div
+                key={index}
                 style={{
-                  width: "25%",
-                  borderRadius: "8px",
-                  textAlign: "center",
+                  display: "flex",
+                  gap: "16px",
+                  justifyContent: "space-evenly",
+                  alignItems: "center",
+                  marginTop: "40px",
+                  flexWrap: "nowrap",
+                  marginBottom: "20px",
                 }}
-              />
-              <h5 style={{ color: "#333" }}>{Service.name}</h5>
-              <p>{Service.title}</p>
-            </div>
-          ))}
-        </div>
+              >
+                {posts.slice(index, index + 3).map((Service) => (
+                  <div
+                    key={Service.id}
+                    style={{
+                      border: "1px solid #ddd",
+                      borderRadius: "8px",
+                      width: "300px",
+                      padding: "16px",
+                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                      backgroundColor: "white",
+                      flex: "0 0 auto",
+                    }}
+                  >
+                    <img
+                      src={Service.image}
+                      alt={Service.name}
+                      style={{
+                        width: "25%",
+                        borderRadius: "8px",
+                        height: "60px",
+                        marginLeft: "90px",
+                        marginBottom: "20px",
+                      }}
+                    />
+                    <h5 style={{ color: "#333", textAlign: "center" }}>
+                      {Service.name}
+                    </h5>
+                    <p style={{ textAlign: "center" }}>{Service.title}</p>
+                  </div>
+                ))}
+              </div>
+            )
+        )}
       </div>
     </div>
   );
