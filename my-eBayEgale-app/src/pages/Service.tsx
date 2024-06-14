@@ -69,7 +69,7 @@ const Service: React.FC = () => {
           <h1 style={{ color: "white" }}>Services</h1>
           <FaHome style={{ fontSize: "60px", marginTop: "20px" }} />
           <a
-            href="/"
+            href="/Home"
             style={{
               textDecoration: "none",
               fontSize: "30px",
