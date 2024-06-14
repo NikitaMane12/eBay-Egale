@@ -1,0 +1,89 @@
+/* src/Offices.css */
+.offices-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  margin-bottom: 50px;
+}
+
+.offices-header {
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+.offices-cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.office-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.office-card:hover {
+  transform: scale(1.05);
+}
+
+.office-image {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.office-details {
+  padding: 15px;
+  height: 500px;
+  position: relative;
+  color: white;
+}
+
+.office-inner-div {
+  text-align: left;
+  padding: 15px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 10px;
+}
+
+.office-city {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.office-address {
+  font-size: 1em;
+  margin: 10px 0;
+  /* color: #555; */
+}
+
+.view-map-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: background-color 0.3s;
+}
+
+.view-map-button:hover {
+  background-color: #444;
+}
+
+.view-map-button i {
+  font-size: 1em;
+}

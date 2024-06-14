@@ -6,76 +6,82 @@ import {
   faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Contact.css";
+import { Offices } from "../componets/Offices";
 
 export const Contact = () => {
   return (
-    <div style={styles.container}>
-      <div style={styles.leftSection}>
-        <h2 style={styles.header}>LET'S TALK</h2>
-        <h1 style={styles.title}>Speak With Expert</h1>
-        <p style={styles.description}>
-          From its medieval origins to the digital era, learn everything there
-          is to know about the ubiquitous lorem ipsum passage.
-        </p>
-        <div style={styles.contactInfo}>
-          <div style={styles.contactItem}>
-            <FontAwesomeIcon icon={faEnvelope} style={styles.icon} />
-            <p>Email: abcdef@convextech.com</p>
-          </div>
-          <div style={styles.contactItem}>
-            <FontAwesomeIcon icon={faPhone} style={styles.icon} />
-            <p>Call Us: +1 (770) 597-2223</p>
-          </div>
-          <div style={styles.contactItem}>
-            <FontAwesomeIcon icon={faMapMarkerAlt} style={styles.icon} />
-            <p>Office Address: USA: 10240 Kemah Place McKinney 75071 TX, USA</p>
-          </div>
-          <div style={styles.contactItem}>
-            <FontAwesomeIcon icon={faClock} style={styles.icon} />
-            <p>
-              OFFICE TIMING: 9:00 AM to 06:00 PM(Mon-Fri) <br />
-              9:00 AM to 01:00 PM(Saturday)
-            </p>
+    <div>
+      <div style={styles.container}>
+        <div style={styles.leftSection}>
+          <h2 style={styles.header}>LET'S TALK</h2>
+          <h1 style={styles.title}>Speak With Expert</h1>
+          <p style={styles.description}>
+            From its medieval origins to the digital era, learn everything there
+            is to know about the ubiquitous lorem ipsum passage.
+          </p>
+          <div style={styles.contactInfo}>
+            <div style={styles.contactItem}>
+              <FontAwesomeIcon icon={faEnvelope} style={styles.icon} />
+              <p>Email: abcdef@convextech.com</p>
+            </div>
+            <div style={styles.contactItem}>
+              <FontAwesomeIcon icon={faPhone} style={styles.icon} />
+              <p>Call Us: +1 (770) 597-2223</p>
+            </div>
+            <div style={styles.contactItem}>
+              <FontAwesomeIcon icon={faMapMarkerAlt} style={styles.icon} />
+              <p>
+                Office Address: USA: 10240 Kemah Place McKinney 75071 TX, USA
+              </p>
+            </div>
+            <div style={styles.contactItem}>
+              <FontAwesomeIcon icon={faClock} style={styles.icon} />
+              <p>
+                OFFICE TIMING: 9:00 AM to 06:00 PM(Mon-Fri) <br />
+                9:00 AM to 01:00 PM(Saturday)
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div style={styles.rightSection}>
-        <form style={styles.form}>
-          <input type="text" placeholder="abcdef" style={styles.input} />
-          <input
-            type="email"
-            placeholder="abcdef@gmail.com"
-            style={styles.input}
-          />
-          <input
-            type="text"
-            placeholder="+1 (770) 597-2223"
-            style={styles.input}
-          />
-          <textarea
-            placeholder="Your Message here"
-            style={styles.textarea}
-          ></textarea>
-          <button type="submit" style={styles.submitButton}>
-            SUBMIT NOW
-          </button>
-          <div style={styles.recaptcha}>
-            <div>
-              <input
-                type="checkbox"
-                id="notRobot"
-                style={{ marginInline: "10px" }}
-              />
-              <label htmlFor="notRobot">I'm not a robot</label>
-            </div>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/800px-RecaptchaLogo.svg.png"
-              alt="reCAPTCHA"
-              style={styles.recaptchaImage}
+        <div style={styles.rightSection}>
+          <form style={styles.form}>
+            <input type="text" placeholder="abcdef" style={styles.input} />
+            <input
+              type="email"
+              placeholder="abcdef@gmail.com"
+              style={styles.input}
             />
-          </div>
-        </form>
+            <input
+              type="text"
+              placeholder="+1 (770) 597-2223"
+              style={styles.input}
+            />
+            <textarea
+              placeholder="Your Message here"
+              style={styles.textarea}
+            ></textarea>
+            <button type="submit" style={styles.submitButton}>
+              SUBMIT NOW
+            </button>
+            <div style={styles.recaptcha}>
+              <div>
+                <input
+                  type="checkbox"
+                  id="notRobot"
+                  style={{ marginInline: "10px" }}
+                />
+                <label htmlFor="notRobot">I'm not a robot</label>
+              </div>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/800px-RecaptchaLogo.svg.png"
+                alt="reCAPTCHA"
+                style={styles.recaptchaImage}
+              />
+            </div>
+          </form>
+        </div>
       </div>
+      <Offices />
     </div>
   );
 };
