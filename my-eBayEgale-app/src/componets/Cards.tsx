@@ -21,22 +21,22 @@ interface Post {
   paragraph: string;
 }
 
-// Define keyframes for the border animation
+
 const borderAnimation = keyframes`
   0% {
-    clip-path: polygon(0 0, 0 0, 0 0, 100% 0);
+    clip-path: polygon(100% 0, 0 0, 0 0, 0% 0);
   }
   25% {
-    clip-path: polygon(0 0, 0 0, 0 0, 0 100%);
+    clip-path: polygon(100% 0, 0 0, 0 0, 0 0%);
   }
   50% {
-    clip-path: polygon(0 0, 0 0, 0 100%, 0 0);
+    clip-path: polygon(100% 0, 0 0, 0 100%, 0 0);
   }
   75% {
     clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
   }
   100% {
-    clip-path: polygon(100% 0, 100% 0, 100% 0, 0 100%);
+    clip-path: polygon(100% 0, 0 0, 100% 0, 0 100%);
   }
 `;
 
@@ -68,8 +68,16 @@ const CardList: React.FC = () => {
   }
 
   return (
-    <Box boxShadow='dark-lg' p='6' rounded='md' bg='white'>
-      <Grid templateColumns='repeat(2, 1fr)' gap={2}>
+    <>
+    <Box style={{textAlign:"center"}}>
+    <Text as='b' style={{color:"blue", fontSize:"20px"}}>OUR SERVICES</Text>
+    <Heading style={{fontSize:"30px", margin:"10px", width:"450px", marginLeft:"350px"}}>Leading Recruitment Agency in USA and Canada</Heading>
+    <Text style={{width:"700px",color:"#888c94",margin:"10px", textAlign:"center",marginLeft:"220px"}}>ConvexTech is committed to promoting diversity in all sectors of th
+    e economy. We have a thorough understanding of the difficulties that businesses encounter in today’s dynamic business 
+    environment. Our service team provides comprehensive, integrated solutions that enable businesses to shift confidently.</Text>
+    </Box>
+    <Box boxShadow='dark-lg' p='8' rounded='md' bg='white'>
+      <Grid templateColumns='repeat(2, 1fr)' gap={6}>
         {posts.map((post) => (
           <GridItem key={post.id} w="90%">
             <Card
@@ -84,9 +92,9 @@ const CardList: React.FC = () => {
               borderRadius="lg"
               sx={{
                 position: 'relative',
-                boxShadow: '3px 5px 10px black',
+                boxShadow: '1px 2px 8px black',
                 border: '2px solid transparent',
-                transition: 'border 0.4s ease-in-out',
+                transition: 'border 0.6s ease-in-out',
                 _hover: {
                   _before: {
                     content: '""',
@@ -109,7 +117,7 @@ const CardList: React.FC = () => {
                   width: "130px",
                   height: "90px",
                   padding: "10px",
-                  marginTop: "40px",
+                  marginTop: "20px",
                   gap: "6px",
                 }}
                 bg="#eef4fc"
@@ -127,9 +135,9 @@ const CardList: React.FC = () => {
               </Box>
               <Stack>
                 <CardBody textAlign="start" ml="20px">
-                  <Text style={{ padding: "1px" }} size="md">{post.name}</Text>
-                  <Heading size="">{post.title}</Heading>
-                  <Text py="2">{post.paragraph}</Text>
+                  <Text style={{color:"#888c94" ,padding: "1px", margin:"0px" }}>{post.name}</Text>
+                  <Heading style={{fontSize:"18px", margin:"0px"}}>{post.title}</Heading>
+                  <Text style={{color:"#888c94"}} py="2">{post.paragraph}</Text>
                 </CardBody>
               </Stack>
             </Card>
@@ -137,6 +145,7 @@ const CardList: React.FC = () => {
         ))}
       </Grid>
     </Box>
+    </>
   );
 };
 
