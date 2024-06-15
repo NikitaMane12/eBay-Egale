@@ -20,6 +20,7 @@ const Footer = () => {
       bg="#00006c"
       color="white"
       fontSize="20px"
+      marginTop="60px"
     >
       {/* Section: Social media */}
       <Box
