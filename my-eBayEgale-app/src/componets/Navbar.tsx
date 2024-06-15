@@ -88,7 +88,7 @@ const Navbar: React.FC = () => {
             </NavDropdown>
             <Nav.Link
               as={Link}
-              to="/contact-us"
+              to="/Contact"
               style={{ fontSize: "15px", fontWeight: "bold" }}
             >
               CONTACT US
