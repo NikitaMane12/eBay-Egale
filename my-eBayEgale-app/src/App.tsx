@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Navbar from "./componets/Navbar";
 import Footer from "./componets/Footer";
 import Service from "./pages/Service";
+import WhyChooseUs from "./pages/WhyChooseUs";
 
 const App: React.FC = () => {
   return (
@@ -15,6 +16,7 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/Service" element={<Service />} />
+        <Route path="/WhyChooseUs" element={<WhyChooseUs />} />
         {/* Other routes go here */}
       </Routes>
       <Footer />

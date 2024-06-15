@@ -6,7 +6,6 @@ import {
   FaInstagram,
   FaLinkedin,
   FaGithub,
-  FaGem,
   FaHome,
   FaEnvelope,
   FaPhone,
@@ -32,13 +31,13 @@ const Footer = () => {
         borderColor="gray.200"
       >
         {/* Left */}
-        <Box display={{ base: "none", lg: "block" }} mr="5" fontSize="20px">
+        <Box display={{ base: "none", lg: "block" }} mr="5">
           <Text>Get connected with us on social networks:</Text>
         </Box>
         {/* Left */}
 
         {/* Right */}
-        <Box display="flex " justifyContent="space-evenly">
+        <Box display="flex" justifyContent="space-evenly">
           <Link href="" mx="2">
             <Icon as={FaFacebookF} />
           </Link>
@@ -83,12 +82,7 @@ const Footer = () => {
                   />
                 </a>
               </Text>
-              <Text
-                mt="5px"
-                fontSize="20px"
-                marginRight="70px"
-                marginTop="20px"
-              >
+              <Text mt="5px" marginRight="70px" marginTop="20px">
                 ConvexTech Inc. is proud to operate with a globally distributed
                 team, ensuring a diverse and dynamic working environment.
               </Text>
@@ -103,13 +97,12 @@ const Footer = () => {
                 textTransform="uppercase"
                 fontWeight="bold"
                 mb="4"
-                fontSize="20px"
                 marginTop="20px"
               >
                 Company
               </Text>
               <Text marginTop="20px">
-                <Link href="#!" color="white" mt="6px" textDecoration="none">
+                <Link href="#Home" color="white" mt="6px" textDecoration="none">
                   Home
                 </Link>
               </Text>
@@ -134,7 +127,6 @@ const Footer = () => {
                 textTransform="uppercase"
                 fontWeight="bold"
                 mb="4"
-                fontSize="20px"
                 marginTop="20px"
               >
                 Solutions
@@ -165,22 +157,18 @@ const Footer = () => {
                 </Link>
               </Text>
             </Box>
-            {/* Grid column */}
 
-            {/* Grid column */}
             <Box flex="1" minW="200px" mb="4">
-              {/* Links */}
               <Text
                 as="h6"
                 textTransform="uppercase"
                 fontWeight="bold"
                 mb="4"
-                fontSize="20px"
                 marginTop="20px"
               >
                 Contact
               </Text>
-              <Text marginTop="20px">
+              <Text marginTop="20px" fontSize={"20px"}>
                 <Icon as={FaHome} mr="3" /> 11200 Broadway Suite 2743, Pearland,
                 TX 77584
               </Text>
@@ -194,14 +182,10 @@ const Footer = () => {
                 <Icon as={FaPrint} mr="3" /> + 01 234 567 89
               </Text>
             </Box>
-            {/* Grid column */}
           </Flex>
-          {/* Grid row */}
         </Box>
       </Box>
-      {/* Section: Links */}
 
-      {/* Copyright */}
       <hr></hr>
       <Box textAlign="center" p="4" bg="rgba(0, 0, 0, 0.05)" mt="6px" mb="6px">
         © Copyright 2024.
@@ -209,7 +193,6 @@ const Footer = () => {
           ConvexTech.com
         </Link>
       </Box>
-      {/* Copyright */}
     </Box>
   );
 };

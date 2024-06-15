@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/why-choose-us"
+              to="/WhyChooseUs"
               style={{ fontSize: "15px", fontWeight: "bold" }}
             >
               WHY CHOOSE US
