@@ -1,0 +1,30 @@
+/* src/components/Review.css */
+.review {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.review img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.rating {
+  color: gold;
+}
+
+.client-reviews {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
