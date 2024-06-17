@@ -27,7 +27,7 @@ const animatedCardStyles = {
     '::after': {
       content: '""',
       position: 'absolute',
-      bottom: '-5px', 
+      bottom: '-5px',
       left: 0,
       width: '100%',
       height: '5px',
@@ -39,16 +39,17 @@ const animatedCardStyles = {
 
 export const FourCards = () => {
   return (
-    <div>
-      <Box textAlign="center" mt="100px" m="40px">
+    <Box textAlign="center" mt="100px" mx="auto" maxW="1200px">
+      <Box mb="40px">
         <Text as='b' color="blue" fontSize="20px">WORK PROCESS</Text>
-        <Heading fontSize="30px" m="10px" w="450px" ml="300px">How we help of your businessGrow and successful</Heading>
-        <Text w="700px" color="#888c94" m="10px" textAlign="center" ml="220px">Partnering for Growth and Success: Transforming Your Business Together</Text>
+        <Heading fontSize="30px" mt="10px" mb="10px" w="40%" mx="auto">How we help your business grow and succeed</Heading>
+        <Text w={{ base: "90%", md: "700px" }} color="#888c94" mx="auto">
+          Partnering for Growth and Success: Transforming Your Business Together
+        </Text>
       </Box>
-      <SimpleGrid spacing={40} mt={80} templateColumns='repeat(auto-fill, minmax(240px, 1fr))'>
-        <Card
-         sx={animatedCardStyles} p="20px" pt="60px" height="250px">
-          <Flex gap="40%">
+      <SimpleGrid spacing={20} mt={10} templateColumns='repeat(auto-fill, minmax(240px, 1fr))' justifyItems="center">
+        <Card sx={animatedCardStyles} p="20px" pt="60px">
+          <Flex gap="40%" justify="center" align="center">
             <Heading fontSize="50px" m="0px" color="blue">01</Heading>
             <Image w="50px" h="50px" m="20px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9JOXxLKG14EffTO6WPHFNFZqwgljsW518-XZZKlmVaWh0txxB" alt="" />
           </Flex>
@@ -58,13 +59,13 @@ export const FourCards = () => {
         <Card sx={animatedCardStyles} p="20px" pt="60px">
           <Heading m="0px" fontSize="17px" textAlign="left">Request a Meeting</Heading>
           <Text textAlign="left">Schedule a consultation to discuss your goals and how we can help you achieve them</Text>
-          <Flex gap="40%">
+          <Flex gap="40%" justify="center" align="center">
             <Heading fontSize="50px" m="0px" color="blue">02</Heading>
             <Image w="60px" h="60px" m="10px" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSqyril8n3GdMrU1VZb1oJmRP64Q5E794SgUCvfu53Fv82gQEk6" alt="" />
-          </Flex>
+          </Flex>     
         </Card>
         <Card sx={animatedCardStyles} p="20px" pt="60px">
-          <Flex gap="40%">
+          <Flex gap="40%" justify="center" align="center">
             <Heading fontSize="50px" m="0px" color="blue">03</Heading>
             <Image w="70px" h="70px" m="10px" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRV2UtfeXcF8MgQlf-JFuscKeDO5myeo-T0Ezbc5MV5MS-0K_XD" alt="" />
           </Flex>
@@ -72,14 +73,15 @@ export const FourCards = () => {
           <Text textAlign="left">Get a tailored strategy designed specifically to meet your business objectives.</Text>
         </Card>
         <Card sx={animatedCardStyles} p="20px" pt="60px">
+          
           <Heading m="0px" fontSize="17px" textAlign="left">Let’s Make it Happen</Heading>
           <Text textAlign="left">Implement the plan with our expert support, driving your business towards success.</Text>
-          <Flex gap="40%">
+          <Flex gap="40%" justify="center" align="center">
             <Heading fontSize="50px" m="0px" color="blue">04</Heading>
             <Image w="80px" h="80px" m="7px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDwZlxPZjjxPf8lgXTNLhw2rV9GXB6SwH5jlU5mjlzn_62_FhE" alt="" />
-          </Flex>
+          </Flex> 
         </Card>
       </SimpleGrid>
-    </div>
+    </Box>
   );
 };

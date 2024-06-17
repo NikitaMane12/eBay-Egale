@@ -45,56 +45,58 @@ export const ReviewCards = () => {
     return (
         <Box position="relative" marginTop="100px">
 
-           
-                <Box textAlign="left" margin="auto">
-
-                    <Text as='b' color="blue" fontSize="20px">OUR CLIENT'S REVIEW</Text>
-                    <Heading fontSize="30px" w="450px">What client say about us?</Heading>
-
-                </Box>
-                <Box  marginTop ="-90px" ml="900px">
+            <Box textAlign="left" margin="auto">
+                <Text as='b' color="blue" fontSize="20px" ml="40px">OUR CLIENT'S REVIEW</Text>
+                <Heading fontSize="30px" w="450px" ml="40px">What client say about us?</Heading>
+            </Box>
+            <Box  marginTop ="-90px" ml="900px">
                 <Button
-              
-               padding="10px"
-               
-                transform="translateY(-50%)"
-                backgroundColor="transparent"
-                border="1px solid"
-                color="#000"
-                fontSize="24px"
-                cursor="pointer"
-               
-                onClick={prevSlide}
-            >
-                &#10094;
-            </Button>
-            <Button
-             
-                padding="10px"
-                transform="translateY(-50%)"
-                backgroundColor="transparent"
-                 border="1px solid"
-                color="#000"
-                fontSize="24px"
-                cursor="pointer"
-                
-                onClick={nextSlide}
-            >
-                &#10095;
-            </Button>
-                </Box>
-          
+                    mr="20px"
+                    padding="10px"
+                    transform="translateY(-50%)"
+                    backgroundColor="transparent"
+                    border="1px solid"
+                    color="#000"
+                    marginTop="60px"
+                    fontSize="24px"
+                    cursor="pointer"
+                    onClick={prevSlide}
+                    borderRadius="8px"
+                >
+                    &#10094;
+                </Button>
+                <Button
+                    padding="10px"
+                    transform="translateY(-50%)"
+                    backgroundColor="transparent"
+                    border="1px solid"
+                    color="#000"
+                    marginTop="60px"
+                    fontSize="24px"
+                    cursor="pointer"
+                    onClick={nextSlide}
+                    borderRadius="8px"
+                >
+                    &#10095;
+                </Button>
+            </Box>
 
-            <Box display="flex" overflowX="hidden" gap={100} mt="50px">
+            <Flex
+                justifyContent="center"
+                alignItems="center"
+                overflowX="hidden"
+                gap={100}
+                mt="50px"
+            >
                 {reviews.map((review, index) => (
                     <Box
                         key={review.id}
                         flex="0 0 300px"
                         display={index >= currentSlide && index < currentSlide + 2 ? "block" : "none"}
-                        marginRight="20px"
+                        marginRight="-20px"
                     >
-                        <Card boxShadow="1px 2px 3px" width="500px">
-                            <Flex gap="30px" >
+                        <Card boxShadow="1px 2px 3px" width="500px" padding="20px">
+                            <Flex gap="30px">
                                 <Image
                                     src={review.image}
                                     alt={review.name}
@@ -129,7 +131,7 @@ export const ReviewCards = () => {
                         </Card>
                     </Box>
                 ))}
-            </Box>
+            </Flex>
             
         </Box>
     );
