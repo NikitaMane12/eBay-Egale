@@ -21,7 +21,7 @@ const AdminSideBar: React.FC = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://koshi-exception-023-2.onrender.com/Properties');
+      const response = await fetch('https');
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }

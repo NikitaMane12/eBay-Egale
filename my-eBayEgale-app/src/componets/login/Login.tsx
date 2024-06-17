@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Center, Box, Heading, Input, Button } from '@chakra-ui/react';
+import { Center, Box, Heading, Input, Button} from '@chakra-ui/react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { usersUrl } from '../../utils/server';
+import { Link } from "react-router-dom";
 
 interface UserData {
   email: string;
@@ -64,41 +65,48 @@ export function Login() {
           <Heading as="h1" mb="4" textAlign="center" size="lg">
             Login
           </Heading>
-          <Box bg="white" p="8" rounded="lg" boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px">
-            <form onSubmit={handleSubmit}>
-              <Input
+          <Box bg="white" padding="16px" rounded="lg" boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px">
+            <form style={{padding:"50px"}} onSubmit={handleSubmit}>
+            <label >Email</label> <br />
+              <Input 
+              style={{padding:"10px",width:"400px",borderRadius:"6px",marginTop:"5px"}}
                 mb="4"
                 name="email"
                 type="email"
                 placeholder="Email"
                 onChange={handleChange}
                 value={userData.email}
-              />
-              <Input
+              /> <br />
+              <label >Password</label> <br />
+              <Input 
+              style={{padding:"10px",width:"400px",borderRadius:"6px",marginTop:"5px"}}
                 mb="4"
                 name="pass"
                 type="password"
                 placeholder="Password"
                 onChange={handleChange}
                 value={userData.pass}
-              />
+              /> <br />
               {adminPass && (
                 <p style={{ paddingBottom: '10px', color: 'red' }}>Enter correct password</p>
               )}
               {userPass && (
                 <p style={{ paddingBottom: '10px', color: 'red' }}>Please enter valid credential</p>
               )}
-              <Button type="submit" colorScheme="blue" width="full">
+              <Button style={{backgroundColor:"blue",color:"white",padding:"10px",borderRadius:"10px",width:"150px",margin:"10px",marginLeft:"130px"}} type="submit" colorScheme="blue" width="full">
                 Login
               </Button>
             </form>
             <Box mt={4} textAlign="center">
-              <Button variant="link" color="blue.500" onClick={() => navigate('/signup')}>
+              <Button style={{backgroundColor:"blue",color:"white",padding:"10px",borderRadius:"10px",marginRight:"10px"}} variant="link" color="blue.500" onClick={() => navigate('/signup')}>
                 Create new Account
               </Button>
-              <Button variant="link" color="blue.500" onClick={() => navigate('/DashBoard')}>
+              <Link to="/admin">
+              <Button style={{backgroundColor:"blue",color:"white",padding:"10px",borderRadius:"10px"}} variant="link" color="blue.500" onClick={() => navigate('/DashBoard')}>
                 Admin Login
               </Button>
+              </Link>
+              
             </Box>
           </Box>
         </Box>

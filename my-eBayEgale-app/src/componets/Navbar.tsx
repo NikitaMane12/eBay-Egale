@@ -1,5 +1,3 @@
-// src/components/Navbar.tsx
-
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import {
@@ -119,28 +117,32 @@ const Navbar: React.FC = () => {
           </Button>
         </Form>
 
-        <div style={{ marginLeft: "1px", display: "flex" }}>
-          <Button
-            style={{
-              fontSize: "13px",
-              fontWeight: "bold",
-              marginRight: "10px",
-              height: "35px",
-              marginTop: "17px",
-            }}
-          >
-            Login
-          </Button>
-          <Button
-            style={{
-              fontSize: "13px",
-              fontWeight: "bold",
-              height: "35px",
-              marginTop: "17px",
-            }}
-          >
-            SignUp
-          </Button>
+        <div style={{ marginLeft: "20px", display: "flex" }}>
+          <Link to="/login">
+            <Button
+              style={{
+                fontSize: "15px",
+                fontWeight: "bold",
+                marginRight: "10px",
+                height: "40px",
+                marginTop: "10px",
+              }}
+            >
+              Login
+            </Button>
+          </Link>
+          <Link to="/signup">
+            <Button
+              style={{
+                fontSize: "15px",
+                fontWeight: "bold",
+                height: "40px",
+                marginTop: "10px",
+              }}
+            >
+              SignUp
+            </Button>
+          </Link>
         </div>
       </div>
     </BootstrapNavbar>

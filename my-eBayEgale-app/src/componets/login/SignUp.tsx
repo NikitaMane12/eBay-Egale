@@ -104,34 +104,40 @@ export function SignUp() {
   return (
     <Center h="100vh" w="100vw">
       <Box maxW="md" mx="auto" mt="8">
-        <Heading as="h1" mb="4" textAlign="center" size="lg">
+        <Heading as="h1" mb="4" textAlign="center" size="lg" mt={100}>
           Sign Up
         </Heading>
         <Box bg="white" p="8" rounded="lg" boxShadow="rgba(0, 0, 0, 0.35) 0px 5px 15px">
-          <form onSubmit={handleSubmit}>
+          <form style={{padding:"50px"}} onSubmit={handleSubmit}>
+          <label >User Name</label> <br />
             <Input
+            style={{padding:"10px",width:"400px",borderRadius:"6px",marginTop:"5px"}}
               mb="4"
               name="u_name"
               placeholder="Username"
               onChange={handleChange}
               value={userData.u_name}
-            />
+            /> <br />
+            <label >Email</label> <br />
             <Input
+            style={{padding:"10px",width:"400px",borderRadius:"6px",marginTop:"5px"}}
               mb="4"
               name="email"
               type="email"
               placeholder="Email"
               onChange={handleChange}
               value={userData.email}
-            />
+            /> <br />
+            <label >Password</label> <br />
             <Input
+            style={{padding:"10px",width:"400px",borderRadius:"6px",marginTop:"5px"}}
               mb="4"
               name="password"
               type="password"
               placeholder="Password"
               onChange={handleChange}
               value={userData.password}
-            />
+            /> <br />
 
             {passBox && (
               <div style={{ paddingBottom: '20px' }}>
@@ -187,12 +193,12 @@ export function SignUp() {
                 </Flex>
               </div>
             )}
-            <Button type="submit" colorScheme="blue" width="full">
+            <Button style={{backgroundColor:"blue",color:"white",padding:"10px",borderRadius:"10px", width:"150px", margin:"20px",marginLeft:"120px"}} type="submit" colorScheme="blue" width="full">
               Sign Up
             </Button>
           </form>
           <Box mt={4} textAlign="center">
-            <Button variant="link" color="blue.500" onClick={() => navigate('/login')}>
+            <Button style={{backgroundColor:"blue",color:"white",padding:"10px",borderRadius:"10px", width:"150px"}} variant="link" color="blue.500" onClick={() => navigate('/login')}>
               Login
             </Button>
           </Box>
