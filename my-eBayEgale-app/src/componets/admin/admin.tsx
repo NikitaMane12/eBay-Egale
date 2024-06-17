@@ -35,7 +35,7 @@ const Admin: React.FC = () => {
   };
 
   return (
-    <div style={{ background: '#64B5F6', width: '100%', height: '1500px' }}>
+    <div style={{ background: '#64B5F6', width: '100%', height: '1500px', marginTop:"150px" }}>
       {!sidebarOpen && (
         <button className="toggle-btn" onClick={toggleSidebar} style={{ borderRadius: '20px' }}>
           Admin
