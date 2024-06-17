@@ -8,6 +8,7 @@ import Navbar from "./componets/Navbar";
 import Footer from "./componets/Footer";
 import Service from "./pages/Service";
 import WhyChooseUs from "./pages/WhyChooseUs";
+import { Contact } from "./pages/Contact";
 
 
 import { Login } from "./componets/login/Login";
@@ -21,11 +22,12 @@ const App: React.FC = () => {
         <Route path="/Home" element={<Home />} />
         <Route path="/Service" element={<Service />} />
         <Route path="/WhyChooseUs" element={<WhyChooseUs />} />
+
         <Route path="/Login" element={<Login/>} />
         <Route path="/SignUp" element={<SignUp/>} />
       </Routes>
       <Footer/>
-     
+    
     </>
   );
 };

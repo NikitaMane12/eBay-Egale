@@ -2,6 +2,12 @@
 
 import React from "react";
 import "./Home.css"; // Import the CSS file
+import Profession from "../componets/Professions";
+
+import CardList from "../componets/Cards";
+import { FourCards } from "../componets/FourCards";
+import { ThirdCol } from "../componets/ThirdCol";
+import { ReviewCards } from "../componets/ReviewCards";
 
 const Home: React.FC = () => {
   return (
@@ -127,6 +133,13 @@ const Home: React.FC = () => {
           </a>
         </div>
       </div>
+      <CardList />
+
+      <FourCards />
+      <ThirdCol />
+
+      <Profession />
+      <ReviewCards />
     </>
   );
 };
