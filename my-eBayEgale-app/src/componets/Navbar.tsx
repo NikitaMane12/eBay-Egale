@@ -1,3 +1,6 @@
+// src/components/Navbar.tsx
+
+import { Box } from "@chakra-ui/react";
 import React from "react";
 import {
   Navbar as BootstrapNavbar,
@@ -11,7 +14,8 @@ import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
-    <BootstrapNavbar expand="lg" className="bg-body-tertiary" fixed="top">
+    <Box width="100%">
+    <BootstrapNavbar expand="lg" className="bg-body-tertiary" fixed="top" >
       <div className="container-fluid">
         <BootstrapNavbar.Brand
           as={Link}
@@ -20,7 +24,7 @@ const Navbar: React.FC = () => {
         >
           <img
             src="https://convextech.com/wp-content/uploads/2024/06/logo.svg"
-            style={{ width: "200px", height: "auto", marginLeft: "100px" }}
+            style={{ width: "200px", height: "auto", marginLeft: "10px",marginTop:"-30px" }}
             alt="Logo"
           />
         </BootstrapNavbar.Brand>
@@ -30,8 +34,8 @@ const Navbar: React.FC = () => {
           <Nav
             className="mr-auto"
             style={{
-              fontSize: "16px",
-              marginLeft: "200px",
+              fontSize: "13px",
+              marginLeft: "80px",
               display: "flex",
               gap: "10px",
             }}
@@ -39,28 +43,28 @@ const Navbar: React.FC = () => {
             <Nav.Link
               as={Link}
               to="/Home"
-              style={{ fontSize: "15px", fontWeight: "bold" }}
+              style={{ fontSize: "13px", fontWeight: "bold" }}
             >
               HOME
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/WhyChooseUs"
-              style={{ fontSize: "15px", fontWeight: "bold" }}
+              style={{ fontSize: "13px", fontWeight: "bold" }}
             >
               WHY CHOOSE US
             </Nav.Link>
             <Nav.Link
               as={Link}
-              to="/sap-solution"
-              style={{ fontSize: "15px", fontWeight: "bold" }}
+              to="/SapSolution"
+              style={{ fontSize: "13px", fontWeight: "bold" }}
             >
               SAP SOLUTION
             </Nav.Link>
             <NavDropdown
               title="SERVICE"
               id="basic-nav-dropdown"
-              style={{ fontSize: "15px", fontWeight: "bold" }}
+              style={{ fontSize: "13px", fontWeight: "bold" }}
             >
               <NavDropdown.Item
                 as={Link}
@@ -87,7 +91,7 @@ const Navbar: React.FC = () => {
             <Nav.Link
               as={Link}
               to="/Contact"
-              style={{ fontSize: "15px", fontWeight: "bold" }}
+              style={{ fontSize: "13px", fontWeight: "bold" }}
             >
               CONTACT US
             </Nav.Link>
@@ -98,52 +102,49 @@ const Navbar: React.FC = () => {
       <div
         style={{ display: "flex", alignItems: "center", marginBottom: "10px" }}
       >
-        <Form className="d-flex" style={{ marginRight: "100px" }}>
+        <Form className="d-flex" style={{ marginRight: "50px", marginTop:"15px" }}>
           <FormControl
             type="search"
             placeholder="Search here"
             aria-label="Search"
             className="me-2"
             style={{
-              fontSize: "15px",
+              fontSize: "13px",
               fontWeight: "bold",
               borderRadius: "10px",
             }}
           />
-          <Button style={{ fontSize: "15px", fontWeight: "bold" }}>
+          <Button style={{ fontSize: "13px", fontWeight: "bold" }}>
             Search
           </Button>
         </Form>
 
-        <div style={{ marginLeft: "20px", display: "flex" }}>
-          <Link to="/login">
-            <Button
-              style={{
-                fontSize: "15px",
-                fontWeight: "bold",
-                marginRight: "10px",
-                height: "40px",
-                marginTop: "10px",
-              }}
-            >
-              Login
-            </Button>
-          </Link>
-          <Link to="/signup">
-            <Button
-              style={{
-                fontSize: "15px",
-                fontWeight: "bold",
-                height: "40px",
-                marginTop: "10px",
-              }}
-            >
-              SignUp
-            </Button>
-          </Link>
+        <div style={{ marginLeft: "1px", display: "flex" }}>
+          <Button
+            style={{
+              fontSize: "13px",
+              fontWeight: "bold",
+              marginRight: "10px",
+              height: "35px",
+              marginTop: "17px",
+            }}
+          >
+            Login
+          </Button>
+          <Button
+            style={{
+              fontSize: "13px",
+              fontWeight: "bold",
+              height: "35px",
+              marginTop: "17px",
+            }}
+          >
+            SignUp
+          </Button>
         </div>
       </div>
     </BootstrapNavbar>
+    </Box> 
   );
 };
 

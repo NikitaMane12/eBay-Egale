@@ -9,25 +9,22 @@ import Footer from "./componets/Footer";
 import Service from "./pages/Service";
 import WhyChooseUs from "./pages/WhyChooseUs";
 import { Contact } from "./pages/Contact";
-
-
-import { Login } from "./componets/login/Login";
-import { SignUp } from "./componets/login/SignUp";
+import { SapSolution } from "./componets/SapSolution";
 
 const App: React.FC = () => {
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/Service" element={<Service />} />
         <Route path="/WhyChooseUs" element={<WhyChooseUs />} />
-
-        <Route path="/Login" element={<Login/>} />
-        <Route path="/SignUp" element={<SignUp/>} />
+        <Route path="/sapsolution" element={<SapSolution />}/>
+        <Route path="/Contact" element={<Contact />} />
+        {/* Other routes go here */}
       </Routes>
-      <Footer/>
-    
+
+      <Footer />
     </>
   );
 };

@@ -5,7 +5,7 @@ interface Review {
   id: number;
   image: string;
   name: string;
-  title: number;
+  title: string;
 }
 
 export const Profession: React.FC = () => {
@@ -32,14 +32,14 @@ export const Profession: React.FC = () => {
   };
 
   return (
-    <Box textAlign="center" margin="auto">
+    <Box textAlign="center" margin="auto" position="relative" width="100%" marginTop="70px">
       <Text as="b" color="blue" fontSize="30px">
         TEAM MEMBERS
       </Text>
-      <Heading fontSize="30px" mt="10px">
+      <Heading fontSize="30px" mt="10px" mb="10px" w="40%" mx="auto">
         Meet our professional and expert team members
       </Heading>
-      <Text w="700px" color="#888c94" mb="55px" textAlign="center" ml="500px">
+      <Text w="700px" color="#888c94" mb="55px" textAlign="center" margin="0 auto">
         Discover our team of seasoned professionals and experts dedicated to
         delivering exceptional service. Their expertise and commitment ensure
         your business achieves its fullest potential.
@@ -50,11 +50,13 @@ export const Profession: React.FC = () => {
         justifyContent="center"
         alignItems="center"
         fontSize="20px"
+        position="relative"
       >
         {reviews.map((review, index) => (
           <Box
             key={review.id}
             flex="0 0 33.333%"
+            marginTop="40px"
             display={
               index >= currentSlide && index < currentSlide + 3
                 ? "block"
@@ -62,23 +64,45 @@ export const Profession: React.FC = () => {
             }
             textAlign="center"
             mx="auto"
+            position="relative"
+            height="400px" 
           >
+            
             <Image
               src={review.image}
               alt={`Review ${review.id}`}
               width="330px"
               borderRadius="15px"
+              mx="auto"
+              position="relative"
+              zIndex="0"
             />
             <Box
               backgroundColor="white"
               position="absolute"
-              width="200px"
+              width="280px"
               borderRadius="5px"
-              marginLeft="160px"
-              marginTop="-50px"
-              marginBottom="200px"
+              left="50%"
+              transform="translateX(-50%)"
+              bottom="10px"
+              boxShadow="0 4px 6px rgba(0, 0, 0, 0.1)"
+              p={2}
+              zIndex="1"
             >
-              <Text>{review.name}</Text>
+              <Box
+              position="absolute"
+              top="0"
+              left="0"
+              width="100%"
+              height="100%"
+              background="linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 89, 252, 1) 100%)"
+              zIndex="1"
+              opacity="0"
+              transition="opacity 0.3s"
+              _hover={{ opacity: "1" }}
+             
+            />
+              <Text fontWeight="bold">{review.name}</Text>
               <Text>{review.title}</Text>
             </Box>
           </Box>
@@ -86,7 +110,7 @@ export const Profession: React.FC = () => {
       </Flex>
       <Button
         position="absolute"
-        top="50%"
+        top="60%"
         transform="translateY(-50%)"
         backgroundColor="transparent"
         border="none"
@@ -95,12 +119,13 @@ export const Profession: React.FC = () => {
         cursor="pointer"
         left="10px"
         onClick={prevSlide}
+        _hover={{ backgroundColor: "transparent" }}
       >
         &#10094;
       </Button>
       <Button
         position="absolute"
-        top="50%"
+        top="60%"
         transform="translateY(-50%)"
         backgroundColor="transparent"
         border="none"
@@ -109,6 +134,7 @@ export const Profession: React.FC = () => {
         cursor="pointer"
         right="10px"
         onClick={nextSlide}
+        _hover={{ backgroundColor: "transparent" }}
       >
         &#10095;
       </Button>

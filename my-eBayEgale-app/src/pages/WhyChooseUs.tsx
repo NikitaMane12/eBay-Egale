@@ -1,4 +1,7 @@
 import { FaHome } from "react-icons/fa";
+import { ThirdCol } from "../componets/ThirdCol";
+import { FourCards } from "../componets/FourCards";
+import { ReviewCards } from "../componets/ReviewCards";
 
 const WhyChooseUs = () => {
   return (
@@ -53,6 +56,10 @@ const WhyChooseUs = () => {
           </a>
         </div>
       </div>
+
+      <ThirdCol />
+      <FourCards />
+      <ReviewCards />
     </>
   );
 };

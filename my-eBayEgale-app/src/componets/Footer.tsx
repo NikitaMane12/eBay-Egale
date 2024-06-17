@@ -19,7 +19,7 @@ const Footer = () => {
       textAlign="center"
       bg="#00006c"
       color="white"
-      fontSize="20px"
+      fontSize="17px"
       marginTop="60px"
     >
       {/* Section: Social media */}
@@ -29,7 +29,7 @@ const Footer = () => {
         justifyContent={{ base: "center", lg: "space-evenly" }}
         p="4"
         borderBottom="1px solid"
-        borderColor="gray"
+        borderColor="gray.200"
       >
         {/* Left */}
         <Box display={{ base: "none", lg: "block" }} mr="5">
@@ -169,7 +169,7 @@ const Footer = () => {
               >
                 Contact
               </Text>
-              <Text marginTop="20px" fontSize={"20px"}>
+              <Text marginTop="20px" fontSize={"17px"}>
                 <Icon as={FaHome} mr="3" /> 11200 Broadway Suite 2743, Pearland,
                 TX 77584
               </Text>
