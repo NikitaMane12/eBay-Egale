@@ -1,0 +1,120 @@
+/* Property.css */
+
+.property-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .property-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .rental-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .rental-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .rental-details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rental-image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .rental-info {
+    flex: 1;
+  }
+  
+  .rental-location {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .rental-type,
+  .rental-price,
+  .rental-rating {
+    margin: 5px 0;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+  }
+  
+  .page-item {
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .page-link:hover {
+    background-color: #0056b3;
+  }
+  .update-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  /* Add this CSS to your Property.css file */
+  .add-rental-button {
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  }
+  
+  .add-rental-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  }
+  
+    

@@ -1,0 +1,208 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Initially hide the sidebar */
+    width: 250px;
+    height: 100%;
+    background-color:#1A237E;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .sidebar.open {
+    left: 0; /* Show the sidebar when open */
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #0a0909;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    z-index: 999; 
+  }
+  
+  .content {
+    margin-left: 250px; /* Adjust content position to account for the sidebar */
+    padding: 20px;
+  }
+  .close-btn{
+   
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  /* Hover effect */
+  .close-btn:hover {
+    background-color: hsl(0, 6%, 35%); /* Change the background color on hover */
+  }
+  .adminContainer{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
+    /* height: 100vh; */
+   
+    >.asidebar{
+      width: 100%;
+      /* padding: 1rem; */
+      /* z-index: 10; */
+      overflow-y: auto;
+      
+    }
+  }
+/* properties styling */
+/* App container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+ 
+}
+
+/* Item container */
+.item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Image */
+.item img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* Update form */
+.update-form {
+  margin-top: 10px;
+}
+
+.update-form input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.update-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.update-form button:hover {
+  background-color: #45a049;
+}
+
+/* Add form */
+.add-form {
+  margin-top: 20px;
+}
+
+.add-form input {
+  width: calc(33.33% - 10px);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.add-form button {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.add-form button:hover {
+  background-color: #0073e6;
+}
+.TransactionsAndRevenue{
+  display: flex;
+  flex: column;
+  justify-content:center;
+  background-color: white;
+  padding: 0 2rem 2rem 0;
+  width: 100%;
+  
+}
+.Shares{
+  width:"200px";
+  >span{
+    background-color: "red";
+  }
+}
+.CountryRatio{
+ display: flex;
+ gap: 2rem;
+ padding: 0 2rem 2rem 0;
+ 
+
+}
+.countryChart{
+  position: relative;
+}
+/* Admin.css */
+.hotelForm {
+  margin-bottom: 20px;
+}
+
+.addButton {
+  padding: 8px 16px;
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background-color: #218838;
+}
+
+.hotelTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.hotelTable th, .hotelTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.hotelTable th {
+  background-color: #f2f2f2;
+}
+
+.actionButton {
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.actionButton:hover {
+  background-color: #0056b3;
+}

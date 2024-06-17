@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaHome, FaPhone } from "react-icons/fa";
 import axios from "axios";
-import { Post } from "../types/srvices";
+import { Post } from "../types/services";
 
 const Service: React.FC = () => {
   const [posts, setPosts] = useState<Post[]>([]);

@@ -28,7 +28,7 @@ const Footer = () => {
         justifyContent={{ base: "center", lg: "space-evenly" }}
         p="4"
         borderBottom="1px solid"
-        borderColor="gray.200"
+        borderColor="gray"
       >
         {/* Left */}
         <Box display={{ base: "none", lg: "block" }} mr="5">

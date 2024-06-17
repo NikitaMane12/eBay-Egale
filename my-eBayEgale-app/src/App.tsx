@@ -9,6 +9,10 @@ import Footer from "./componets/Footer";
 import Service from "./pages/Service";
 import WhyChooseUs from "./pages/WhyChooseUs";
 
+
+import { Login } from "./componets/login/Login";
+import { SignUp } from "./componets/login/SignUp";
+
 const App: React.FC = () => {
   return (
     <>
@@ -17,9 +21,11 @@ const App: React.FC = () => {
         <Route path="/Home" element={<Home />} />
         <Route path="/Service" element={<Service />} />
         <Route path="/WhyChooseUs" element={<WhyChooseUs />} />
-        {/* Other routes go here */}
+        <Route path="/Login" element={<Login/>} />
+        <Route path="/SignUp" element={<SignUp/>} />
       </Routes>
-      <Footer />
+      <Footer/>
+     
     </>
   );
 };
