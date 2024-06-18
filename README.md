@@ -68,13 +68,13 @@ To run the my-eBayEgale-app website, enter the following commands in your termin
 
 bash
 
-# Move into the FrontEnd Directory
+## Move into the FrontEnd Directory
 cd my-eBayEgale-app/
 
-# Install all dependencies
+## Install all dependencies
 npm install
 
-# Run the dev server
+## Run the dev server
 npm run dev
 
 ## Technology Stack
